@@ -42,13 +42,14 @@
 
           <mat-card-content #scroller [style.overflow]="'auto'" [style.height.px]="'300'">
             <button mat-button (click)="onClick()">add attribute</button>
-            <mat-card *ngFor="let attribute of commonAttributes;">
-              <div *ngIf="attribute keyof item.attributeTable">
+            <!-- <mat-card *ngFor="let attribute of item;"> -->
+              <!-- <div *ngIf="attribute keyof item.attributeTable">
                 heyy
                 {{attribute}}
-              </div>
+              </div> -->
 
-            </mat-card>
+            <!-- </mat-card> -->
+            {{item.attributeTable}}
           </mat-card-content>
 
           <mat-divider></mat-divider>
