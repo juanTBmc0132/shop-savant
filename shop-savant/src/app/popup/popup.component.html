@@ -1,0 +1,20 @@
+<div #main>
+  <button mat-button (click)="onClick()">Action</button>
+  <mat-slide-toggle (toggleChange)="onClick()">toggle</mat-slide-toggle>
+  <mat-form-field appearance="fill">
+    <mat-select placeholder="select here">
+      <mat-option *ngFor='let item of items' [value]="item">{{item}}</mat-option>
+  </mat-select>
+  </mat-form-field>
+
+<div *ngFor="let item of items;">
+  <mat-card style="background-color: aqua;">
+    <img mat-card-image src="assets/error.png" alt="test image"/>
+    {{item}}
+</mat-card>
+HII
+<mat-divider></mat-divider>
+</div>
+</div>
+
+
