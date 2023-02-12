@@ -1,48 +1,92 @@
-<div style="height: 450px;
-width: 300px;">
-  <div #main>
-  <a href="http://localhost:4200/comparison" target="_blank"><button mat-button (click)="onClick">more details</button></a>
-  <button mat-button (click)="onClick()">Action</button>
-  <mat-slide-toggle (toggleChange)="onClick()">toggle</mat-slide-toggle>
-  <div>
-    <mat-form-field appearance="fill">
-    <select placeholder="select here">
-      <option *ngFor='let item of items' [value]="item">{{item}}</option>
-  </select>
-  </mat-form-field>
-
+<div style="height: 450px; width: 300px;">
+  <div id="title-bar">
+    Shop-Savant
+    <img src="../../assets/logo.png">
   </div>
 
+  <div id="main">
+    <button type="button" (click)="onClick()">{{currentPageAdded?"Remove Page from Comparison":"Add Product Page to Comparison"}} <!--<img src="../../assets/logo.png">--></button>
+    <div id="comparisons-list">
 
-<div *ngFor="let item of itemCompareList;">
-  <div (mouseover)="item.hovered=true" (mouseout)="item.hovered=false">
-    <mat-card style="background-color: aqua;" class="CARD">
-    <mat-card-header>
-      <mat-card-title>{{item.title}} ${{item.price}}</mat-card-title>
-    </mat-card-header>
-    <!-- <span>{{item.title}} ${{item.price}}</span> -->
-    <mat-card-content>
-      <img mat-card-image src="{{item.thumbnail}}" alt="test image" style="width: fit-content;"/>
-  <span *ngIf="item.preferred">
-        THIS ONE IS BETTER
-      </span>
-    </mat-card-content>
+      <div class="comparison">
+        <p class="comparison_category">PRODUCT_CAT_1</p>
 
-      <mat-card-actions>
+        <div class="thumbnail">
+          <table>
+            <tr>
+              <td rowspan="3"><img class="image" src="../../assets/bg.jpg"></td>
+              <td rowspan="2">
+                <p class="title">Blah blah blah blah...</p>
+                <p class="brand">Leboho</p>
+              </td>
+              <td>
+                <p class="price">$45</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="x" src="../../assets/close-button.png"></td>
+            </tr>
+            <tr>
+              <td><span class="reviews">★★★☆☆ 2.6/5</span></td>
+              <td><div class="ranking hype">1</div></td>
+            </tr>
+          </table>
+        </div>
 
-        remove<button class="CLOSE" (click)="itemCompareList.pop()" mat-button >X</button>
-      </mat-card-actions>
+        <div class="thumbnail">
+          <table>
+            <tr>
+              <td rowspan="3"><img class="image" src="../../assets/bg.jpg"></td>
+              <td rowspan="2">
+                <p class="title">Blah blah blah blah...</p>
+                <p class="brand">Leboho</p>
+              </td>
+              <td>
+                <p class="price">$45</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="x" src="../../assets/close-button.png"></td>
+            </tr>
+            <tr>
+              <td><span class="reviews">★★★☆☆ 2.6/5</span></td>
+              <td><div class="ranking">2</div></td>
+            </tr>
+          </table>
+        </div>
 
+        <a href="http://localhost:4200/comparison" target="_blank"><button (click)="onClick">Open Details</button></a>
+      </div>
 
+      <div class="comparison">
+        <p class="comparison_category">PRODUCT_CAT_1</p>
 
+        <div class="thumbnail">
+          <table>
+            <tr>
+              <td rowspan="3"><img class="image" src="../../assets/bg.jpg"></td>
+              <td rowspan="2">
+                <p class="title">Blah blah blah blah...</p>
+                <p class="brand">Leboho</p>
+              </td>
+              <td>
+                <p class="price">$45</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="x" src="../../assets/close-button.png"></td>
+            </tr>
+            <tr>
+              <td><span class="reviews">★★★☆☆ 2.6/5</span></td>
+              <td><div class="ranking hype">1</div></td>
+            </tr>
+          </table>
+        </div>
+        <a href="http://localhost:4200/comparison" target="_blank"><button (click)="onClick">Open Details</button></a>
+      </div>
 
-</mat-card>
+    </div>
   </div>
-
-HII
-<mat-divider></mat-divider>
-</div>
-</div>
 </div>
 
 
