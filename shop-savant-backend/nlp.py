@@ -1,13 +1,18 @@
 import cohere
 import sys
 
-co = cohere.Client("l0HLaS69csw8P2CKRN34mNlJrCa2sbRgC9tOTmmX") # Secrets in code are bad!
+f = open("./secrets.txt", "r")
+secret = f.read()
+f.close()
+
+co = cohere.Client(secret)
 
 def main(prompt):
     response = co.generate(
         prompt = prompt,
         model = "command-medium-nightly",
-        max_tokens = 1000
+        max_tokens = 1000,
+        temperature = 0.25
     )
 
     print(response.generations[0].text)
