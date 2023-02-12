@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { MatFormField } from '@angular/material/form-field';
 import { ComparisonComponent } from './comparison/comparison.component';
 import {MatTableModule} from "@angular/material/table";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import {MatTableModule} from "@angular/material/table";
     MatCardModule,
     MatDividerModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
