@@ -24,12 +24,23 @@ const scrapeAmazonPage = function () {
         "title": document.title.split(" : ")[0],
         "price": price,
         "category": category,
-        "attributes-table": infoHash,
+        "attributeTable": infoHash,
         "ratings": ratingCount,
-        "average_rating": ratingAvg
+        "averageRating": ratingAvg
     };
 
     return product;
 }
 
-export default scrapeAmazonPage;
+const scrapeAmazonXHR = function (url) {
+
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", (e) => {
+        console.log(e);
+        return e;
+    })
+    xhr.open("GET", url);
+    xhr.send();
+}
+
+export {scrapeAmazonPage, scrapeAmazonXHR};
