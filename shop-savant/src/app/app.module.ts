@@ -11,11 +11,13 @@ import {MatSlideToggleModule } from '@angular/material/slide-toggle'
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatFormField } from '@angular/material/form-field';
+import { ComparisonComponent } from './comparison/comparison.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PopupComponent
+    ComparisonComponent,
   ],
   imports: [
     BrowserModule,
