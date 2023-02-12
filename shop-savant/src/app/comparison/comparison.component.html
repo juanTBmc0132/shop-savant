@@ -1,0 +1,164 @@
+<html>
+  <body>
+    <div id="main">
+        <!-- <table mat-table [dataSource]="product_attributes" class="mat-elevation-z8">
+          <ng-container matColumnDef="title" *ngFor="let item of hardcoded_input; index as i">
+            <th mat-header-cell *matHeaderCellDef>Product {{String.fromCharCode(65+i)}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
+        </table> -->
+        <mat-card style="width: 10%; max-height: 80%; margin: 3px; border-radius: 20px;" class="inline-block">
+          <mat-card-header><mat-card-title>Shop-Savant</mat-card-title><mat-card-subtitle>Shop Wisely</mat-card-subtitle></mat-card-header>
+          <mat-divider></mat-divider>
+
+            <mat-card-content [style.overflow]="'auto'" [style.height.px]="'300'">
+              <button mat-button (click)="onClick()">add attribute</button>
+              <!-- <p>{{commonAttributes}}</p> -->
+              <mat-card *ngFor="let attribute of commonAttributes">
+
+                {{attribute}}
+                <mat-divider></mat-divider>
+              </mat-card>
+            </mat-card-content>
+
+          <mat-divider></mat-divider>
+          <mat-card-footer><button mat-button>Settings</button></mat-card-footer>
+        </mat-card>
+
+        <mat-card *ngFor="let item of hardcoded_input; index as i;" style="width: 25%; max-height: 80%; margin: 3px; border-radius: 20px;" class="inline-block">
+          <mat-card-header>
+            <mat-card-title >
+              Product {{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i]}}
+            </mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-subtitle>
+              {{item['title']}} <img src="{{item['image']}}" style="width: 90%; max-height: 80%; justify-content: center;"/>
+              {{item['price']}} ---- {{item['averageRating']}}
+            </mat-card-subtitle>
+
+          </mat-card-header>
+          <mat-divider></mat-divider>
+
+
+          <mat-card-content #scroller [style.overflow]="'auto'" [style.height.px]="'300'">
+            <button mat-button (click)="onClick()">add attribute</button>
+            <!-- <mat-card *ngFor="let attribute of item;"> -->
+              <!-- <div *ngIf="attribute keyof item.attributeTable">
+                heyy
+                {{attribute}}
+              </div> -->
+
+            <!-- </mat-card> -->
+            {{item.attributeTable}}
+          </mat-card-content>
+
+          <mat-divider></mat-divider>
+
+          <mat-card-footer>
+            <mat-divider></mat-divider>
+            <mat-card>
+              <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-card fxFlex="50%">Pros</mat-card> <span fxFlex="50%">4.5/5</span>
+
+              </div>
+              <div fxLayout="row" fxLayoutAlign="start center">
+
+                <mat-card fxFlex="50%">Cons</mat-card> <mat-card fxFlex="50%">Summary</mat-card>
+              </div>
+
+            </mat-card>
+
+          </mat-card-footer>
+        </mat-card>
+
+        <!-- <mat-card style="width: 25%; max-height: 80%; margin: 3px; border-radius: 20px;" class="inline-block">
+          <mat-card-header>
+            <mat-card-title >
+              Product A
+            </mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-subtitle>
+              Title <img src="assets/error.png" style="width: 90%; max-height: 80%; justify-content: center;"/>
+              ratings
+            </mat-card-subtitle>
+
+          </mat-card-header>
+
+
+
+          <mat-card-content [style.overflow]="'auto'" [style.height.px]="'300'">
+            <button mat-button (click)="onClick()"></button>
+            <mat-card *ngFor="let attribute of attributeList">
+              {{attribute}}
+            </mat-card>
+          </mat-card-content>
+
+
+
+          <mat-card-footer>
+            <mat-divider></mat-divider>
+            <mat-card>
+              <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-card fxFlex="50%">Pros</mat-card> <span fxFlex="50%">4.5/5</span>
+
+              </div>
+              <div fxLayout="row" fxLayoutAlign="start center">
+
+                <mat-card fxFlex="50%">Cons</mat-card> <mat-card fxFlex="50%">Summary</mat-card>
+              </div>
+
+            </mat-card>
+
+          </mat-card-footer>
+        </mat-card> -->
+
+
+       <!-- <mat-card style="width: 25%; max-height: 80%; margin: 3px; border-radius: 20px;" class="inline-block">
+          <mat-card-header>
+            <mat-card-title >
+              Product B
+            </mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-subtitle>
+              Title <img src="assets/error.png" style="width: 90%; max-height: 80%; justify-content: center;"/>
+              ratings
+            </mat-card-subtitle>
+
+          </mat-card-header>
+
+
+
+          <mat-card-content [style.overflow]="'auto'" [style.height.px]="'300'">
+            <button mat-button (click)="onClick()"></button>
+            <mat-card *ngFor="let attribute of attributeList">
+              {{attribute}}
+            </mat-card>
+          </mat-card-content>
+
+
+
+          <mat-card-footer>
+            <mat-divider></mat-divider>
+            <mat-card>
+              <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-card fxFlex="50%">Pros</mat-card> <span fxFlex="50%">4.5/5</span>
+
+              </div>
+              <div fxLayout="row" fxLayoutAlign="start center">
+
+                <mat-card fxFlex="50%">Cons</mat-card> <mat-card fxFlex="50%">Summary</mat-card>
+              </div>
+
+            </mat-card>
+
+          </mat-card-footer>
+        </mat-card> -->
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

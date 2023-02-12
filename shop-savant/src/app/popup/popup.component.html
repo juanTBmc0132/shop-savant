@@ -1,0 +1,93 @@
+<div style="height: 450px; width: 300px;">
+  <div id="title-bar">
+    Shop-Savant
+    <img src="../../assets/logo.png">
+  </div>
+
+  <div id="main">
+    <button type="button" (click)="onClick()">{{currentPageAdded?"Remove Page from Comparison":"Add Product Page to Comparison"}} <!--<img src="../../assets/logo.png">--></button>
+    <div id="comparisons-list">
+
+      <div class="comparison">
+        <p class="comparison_category">PRODUCT_CAT_1</p>
+
+        <div class="thumbnail">
+          <table>
+            <tr>
+              <td rowspan="3"><img class="image" src="../../assets/bg.jpg"></td>
+              <td rowspan="2">
+                <p class="title">Blah blah blah blah...</p>
+                <p class="brand">Leboho</p>
+              </td>
+              <td>
+                <p class="price">$45</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="x" src="../../assets/close-button.png"></td>
+            </tr>
+            <tr>
+              <td><span class="reviews">★★★☆☆ 2.6/5</span></td>
+              <td><div class="ranking hype">1</div></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="thumbnail">
+          <table>
+            <tr>
+              <td rowspan="3"><img class="image" src="../../assets/bg.jpg"></td>
+              <td rowspan="2">
+                <p class="title">Blah blah blah blah...</p>
+                <p class="brand">Leboho</p>
+              </td>
+              <td>
+                <p class="price">$45</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="x" src="../../assets/close-button.png"></td>
+            </tr>
+            <tr>
+              <td><span class="reviews">★★★☆☆ 2.6/5</span></td>
+              <td><div class="ranking">2</div></td>
+            </tr>
+          </table>
+        </div>
+
+        <a href="http://localhost:4200/comparison" target="_blank"><button (click)="onClick">Open Details</button></a>
+      </div>
+
+      <div class="comparison">
+        <p class="comparison_category">PRODUCT_CAT_1</p>
+
+        <div class="thumbnail">
+          <table>
+            <tr>
+              <td rowspan="3"><img class="image" src="../../assets/bg.jpg"></td>
+              <td rowspan="2">
+                <p class="title">Blah blah blah blah...</p>
+                <p class="brand">Leboho</p>
+              </td>
+              <td>
+                <p class="price">$45</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="x" src="../../assets/close-button.png"></td>
+            </tr>
+            <tr>
+              <td><span class="reviews">★★★☆☆ 2.6/5</span></td>
+              <td><div class="ranking hype">1</div></td>
+            </tr>
+          </table>
+        </div>
+        <a href="http://localhost:4200/comparison" target="_blank"><button (click)="onClick">Open Details</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

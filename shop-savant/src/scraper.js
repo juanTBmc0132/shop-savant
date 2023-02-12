@@ -1,4 +1,4 @@
-const scrapeAmazonPage = function () {
+function scrapeAmazonPage () {
   const price = document.querySelector(".a-price .a-offscreen").innerHTML;
   const infoTable = document.querySelectorAll("#productDetails_techSpec_section_1 tbody tr");
   const infoHash = Array.from(infoTable)
@@ -34,7 +34,7 @@ const scrapeAmazonPage = function () {
   return product;
 }
 
-const scrapeSearchList = function () {
+function scrapeSearchList () {
   const productList = document.querySelectorAll("h2 a");
   // .map gets all entries
   // .filter removes all the "Sponsored" entries

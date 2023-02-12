@@ -1,0 +1,62 @@
+body {
+  background-image: url("../../assets/bg.jpg");
+  background-size:auto;
+  margin: 0;
+  height: 100vh;
+  font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+  font-weight: 100;
+}
+
+#main {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 25px;
+  width: 80%;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+}
+
+#main table {
+  border-collapse: collapse;
+  border-radius: 25px;
+}
+
+#main table td, #main table th {
+  border: 0 solid darkgrey;
+  border-top-width: 1px;
+}
+
+#main table td{
+  padding: 20px;
+}
+
+#main table tr:first-child th {
+  border-top: 0;
+  background-color: white;
+}
+
+#main table tr:last-child td {
+  border-bottom: 0;
+}
+
+#main table tr td:first-child,
+#main table tr th:first-child {
+  border-left: 0;
+}
+
+#main table tr td:last-child,
+#main table tr th:last-child {
+  border-right: 0;
+}
+
+#main table img{
+  max-width: 80%;
+}
+.inline-block {
+  display: inline-block;
+}
