@@ -15,7 +15,7 @@ def main(prompt):
         temperature = 0.25
     )
 
-    print(response.generations[0].text)
+    return response.generations[0].text
 
 if __name__ == "__main__":
     main(str(sys.argv[1]))

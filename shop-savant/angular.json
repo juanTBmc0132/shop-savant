@@ -24,7 +24,10 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
-              "src/checkbox.js"
+              "src/checkbox.js",
+              "src/scraper.js",
+              "src/backend.js",
+              "src/jquery-3.6.3.min.js"
             ],
             "styles": [
               "src/styles.css"
@@ -88,7 +91,10 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
-              "src/checkbox.js"
+              "src/checkbox.js",
+              "src/scraper.js",
+              "src/backend.js",
+              "src/jquery-3.6.3.min.js"
             ],
             "styles": [
               "src/styles.css"
