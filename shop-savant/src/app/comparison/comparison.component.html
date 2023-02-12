@@ -12,7 +12,7 @@
           <mat-divider></mat-divider>
 
             <mat-card-content [style.overflow]="'auto'" [style.height.px]="'300'">
-              <button mat-button (click)="onClick()">add attribute</button>
+              <!-- <button mat-button (click)="onClick()">add attribute</button> -->
               <!-- <p>{{commonAttributes}}</p> -->
               <mat-card *ngFor="let attribute of commonAttributes">
 
@@ -40,30 +40,26 @@
           <mat-divider></mat-divider>
 
 
-          <mat-card-content #scroller [style.overflow]="'auto'" [style.height.px]="'300'">
-            <button mat-button (click)="onClick()">add attribute</button>
-            <!-- <mat-card *ngFor="let attribute of item;"> -->
-              <!-- <div *ngIf="attribute keyof item.attributeTable">
-                heyy
-                {{attribute}}
-              </div> -->
+          <mat-card-content [style.overflow]="'auto'" [style.height.px]="'300'">
+            <!-- <button mat-button (click)="onClick()">add attribute</button> -->
+            <!-- <p>{{commonAttributes}}</p> -->
+            <mat-card *ngFor="let attribute of commonAttributes">
 
-            <!-- </mat-card> -->
-            {{item.attributeTable}}
+              {{attribute}}: (sample info)
+              <mat-divider></mat-divider>
+            </mat-card>
           </mat-card-content>
-
-          <mat-divider></mat-divider>
 
           <mat-card-footer>
             <mat-divider></mat-divider>
             <mat-card>
               <div fxLayout="row" fxLayoutAlign="start center">
-                <mat-card fxFlex="50%">Pros</mat-card> <span fxFlex="50%">4.5/5</span>
+                <mat-card fxFlex="50%">Pros: high ram option for lower price</mat-card> <span fxFlex="50%">AI review 4.5/5</span>
 
               </div>
               <div fxLayout="row" fxLayoutAlign="start center">
 
-                <mat-card fxFlex="50%">Cons</mat-card> <mat-card fxFlex="50%">Summary</mat-card>
+                <mat-card fxFlex="50%">Cons: less powerful processor compared to others</mat-card> <mat-card fxFlex="50%">Summary: this is a good option in you want middle price</mat-card>
               </div>
 
             </mat-card>
