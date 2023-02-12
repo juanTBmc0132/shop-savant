@@ -32,15 +32,4 @@ const scrapeAmazonPage = function () {
     return product;
 }
 
-const scrapeAmazonXHR = function (url) {
-
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener("load", (e) => {
-        console.log(e);
-        return e;
-    })
-    xhr.open("GET", url);
-    xhr.send();
-}
-
-export {scrapeAmazonPage, scrapeAmazonXHR};
+export default scrapeAmazonPage;
