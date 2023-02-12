@@ -1,31 +1,11 @@
 <html>
   <body>
     <div id="main">
-        <table>
-          <tr>
-            <th></th>
-            <th>Product A</th>
-            <th>Product B</th>
-            <th>Product D</th>
-          </tr>
-          <tr>
-            <th>Title</th>
-            <th>thinkpad 1</th>
-            <th>thinkpad the second</th>
-            <th>thinkpad: thinking boogaloo</th>
-          </tr>
-          <tr>
-            <th>Main Image</th>
-            <th><img src="../../assets/bg.jpg"></th>
-            <th><img src="../../assets/bg.jpg"></th>
-            <th><img src="../../assets/bg.jpg"></th>
-          </tr>
-          <tr>
-            <th>Price</th>
-            <th>$9</th>
-            <th>$10</th>
-            <th>$11</th>
-          </tr>
+        <table mat-table [dataSource]="product_attributes" class="mat-elevation-z8">
+          <ng-container matColumnDef="title" *ngFor="let item of hardcoded_input; index as i">
+            <th mat-header-cell *matHeaderCellDef>Product {{String.fromCharCode(65+i)}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
         </table>
     </div>
   </body>

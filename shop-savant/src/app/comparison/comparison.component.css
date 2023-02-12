@@ -3,6 +3,8 @@ body {
   background-size: cover;
   margin: 0;
   height: 100%;
+  font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+  font-weight: 100;
 }
 
 #main {
@@ -16,18 +18,26 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 25px;
 }
 
 #main table {
   border-collapse: collapse;
+  border-radius: 25px;
 }
 
 #main table td, #main table th {
-  border: 1px solid black;
+  border: 0 solid darkgrey;
+  border-top-width: 1px;
+}
+
+#main table td{
+  padding: 20px;
 }
 
 #main table tr:first-child th {
   border-top: 0;
+  background-color: white;
 }
 
 #main table tr:last-child td {
@@ -45,5 +55,5 @@ body {
 }
 
 #main table img{
-  max-width: 100%;
+  max-width: 80%;
 }
