@@ -1,4 +1,11 @@
 .main {
   height: 400px;
-  width: 600px;
+  width: 300px;
 }
+.CLOSE {
+  display : none;
+}
+.CARD:hover + .CLOSE{
+  display : block !important
+}
+

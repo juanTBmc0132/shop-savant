@@ -1,20 +1,49 @@
-<div #main>
+<div style="height: 450px;
+width: 300px;">
+  <div #main>
+  <a href="http://localhost:4200/comparison" target="_blank"><button mat-button (click)="onClick">more details</button></a>
   <button mat-button (click)="onClick()">Action</button>
   <mat-slide-toggle (toggleChange)="onClick()">toggle</mat-slide-toggle>
-  <mat-form-field appearance="fill">
-    <mat-select placeholder="select here">
-      <mat-option *ngFor='let item of items' [value]="item">{{item}}</mat-option>
-  </mat-select>
+  <div>
+    <mat-form-field appearance="fill">
+    <select placeholder="select here">
+      <option *ngFor='let item of items' [value]="item">{{item}}</option>
+  </select>
   </mat-form-field>
 
-<div *ngFor="let item of items;">
-  <mat-card style="background-color: aqua;">
-    <img mat-card-image src="assets/error.png" alt="test image"/>
-    {{item}}
+  </div>
+
+
+<div *ngFor="let item of itemCompareList;">
+  <div (mouseover)="item.hovered=true" (mouseout)="item.hovered=false">
+    <mat-card style="background-color: aqua;" class="CARD">
+    <mat-card-header>
+      <mat-card-title>{{item.title}} ${{item.price}}</mat-card-title>
+    </mat-card-header>
+    <!-- <span>{{item.title}} ${{item.price}}</span> -->
+    <mat-card-content>
+      <img mat-card-image src="{{item.thumbnail}}" alt="test image" style="width: fit-content;"/>
+  <span *ngIf="item.preferred">
+        THIS ONE IS BETTER
+      </span>
+    </mat-card-content>
+
+      <mat-card-actions>
+
+        remove<button class="CLOSE" (click)="itemCompareList.pop()" mat-button >X</button>
+      </mat-card-actions>
+
+
+
+
 </mat-card>
+  </div>
+
 HII
 <mat-divider></mat-divider>
 </div>
 </div>
+</div>
+
 
 

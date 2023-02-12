@@ -16,7 +16,7 @@ import { ComparisonComponent } from './comparison/comparison.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PopupComponent
+    PopupComponent,
     ComparisonComponent,
   ],
   imports: [
