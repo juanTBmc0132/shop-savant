@@ -5,5 +5,19 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html"
-}
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "jquery-3.6.3.min.js",
+        "scraper.js",
+        "backend.js",
+        "checkbox.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
 }
