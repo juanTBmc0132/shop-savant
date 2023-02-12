@@ -19,6 +19,7 @@ const scrapeAmazonPage = function () {
 
   const ratingCount = document.querySelector("#acrCustomerReviewText").innerHTML.split(" ")[0];
   const ratingAvg = document.querySelector('span[data-hook="rating-out-of-text').innerHTML.split(" ")[0];
+  const image = document.querySelector("#landingImage").src;
 
   const product = {
     "title": document.title.split(" : ")[0],
@@ -26,7 +27,8 @@ const scrapeAmazonPage = function () {
     "category": category,
     "attributeTable": infoHash,
     "ratings": ratingCount,
-    "averageRating": ratingAvg
+    "averageRating": ratingAvg,
+    "image": image
   };
 
   return product;
@@ -49,4 +51,3 @@ const scrapeSearchList = function () {
 }
 
 export { scrapeAmazonPage, scrapeSearchList };
-
